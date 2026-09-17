@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.vebqa</groupId>
 	<artifactId>tn5250j</artifactId>
-	<version>0.7.6.4</version>
+	<version>0.7.6.4-mcp.1</version>
 
 	<url>https://github.com/vebqa/tn5250j</url>
 	<name>TN5250j</name>
@@ -29,6 +29,10 @@
 		</developer>
 	</developers>
 
+	<properties>
+		<skipTests>false</skipTests>
+	</properties>
+
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<testSourceDirectory>tests</testSourceDirectory>
@@ -46,7 +50,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.1</version>
 				<configuration>
-					<skipTests>true</skipTests>
+					<skipTests>${skipTests}</skipTests>
 				</configuration>
 			</plugin>
 			<plugin>
