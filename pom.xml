@@ -51,6 +51,10 @@
 				<version>2.22.1</version>
 				<configuration>
 					<skipTests>${skipTests}</skipTests>
+					<!-- GlobalConfigure reads and writes ${user.home}/.tn5250j; keep tests off the real settings -->
+					<systemPropertyVariables>
+						<user.home>${project.build.directory}/test-home</user.home>
+					</systemPropertyVariables>
 				</configuration>
 			</plugin>
 			<plugin>
